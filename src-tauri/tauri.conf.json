@@ -78,6 +78,7 @@
         "height": 600,
         "resizable": true,
         "fullscreen": false,
+        "closable": false,
         "url": "/#/"
       }
     ],
