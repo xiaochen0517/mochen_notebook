@@ -7,6 +7,7 @@
 <script>
   import Editor from '@toast-ui/editor'
   import '@toast-ui/editor/dist/toastui-editor.css'
+  import '@toast-ui/editor/dist/theme/toastui-editor-dark.css';
   import '@toast-ui/editor/dist/i18n/zh-cn'
 
   export default {
@@ -26,6 +27,7 @@
           height: '100%',
           usageStatistics: false,
           language: 'zh-CN',
+          theme: 'dark',
         })
       })
     }
