@@ -1,7 +1,7 @@
 <template>
   <div class="floating-view" @mousemove="mousemoveHandle" @mousedown="mousedownHandle" @mouseup="mouseupHandle"
        @click="clickHandle">
-    <el-icon>
+    <el-icon class="el-icon">
       <Edit/>
     </el-icon>
   </div>
