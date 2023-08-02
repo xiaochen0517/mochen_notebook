@@ -8,12 +8,13 @@
   import '@toast-ui/editor/dist/toastui-editor.css'
   import '@toast-ui/editor/dist/theme/toastui-editor-dark.css';
   import '@toast-ui/editor/dist/i18n/zh-cn'
+  import {EditorOptions} from "@toast-ui/editor/types/editor";
 
-  const editor = ref(null)
+  const editor = ref<Editor | null>(null)
 
-  const MdEditorComponentRefs = ref(null)
+  const MdEditorComponentRefs = ref<Element | null>(null)
   onMounted(() => {
-    editor.value = new Editor({
+    const editorOptions: EditorOptions = {
       el: MdEditorComponentRefs.value,
       initialValue: '# Hello, world!',
       previewStyle: 'vertical',
@@ -21,7 +22,8 @@
       usageStatistics: false,
       language: 'zh-CN',
       theme: 'dark',
-    })
+    } as EditorOptions
+    editor.value = new Editor(editorOptions)
   })
 </script>
 
